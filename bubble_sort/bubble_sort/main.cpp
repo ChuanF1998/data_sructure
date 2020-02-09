@@ -4,16 +4,16 @@
 
 #include <vector>
 
-//升序
+//升序，用大于
 template<class T>
-bool max(const T& x, const T& y)
+bool greater(const T& x, const T& y)
 {
 	return x > y;
 }
 
-//降序
+//降序，用小于
 template<class T>
-bool min(const T& x, const T& y)
+bool less(const T& x, const T& y)
 {
 	return x < y;
 }
@@ -39,7 +39,7 @@ bool bubble_sort(std::vector<T>& arr, bool(*t)(const T&,const T&))
 int main()
 {
 	std::vector<int> arr{ 3, 4, 6, 3, 2, 98, 34, 54, 6 };
-	bubble_sort(arr, max<int>);
-	bubble_sort(arr, min<int>);
+	bubble_sort(arr, greater<int>);
+	bubble_sort(arr, less<int>);
 	return 0;
 }
