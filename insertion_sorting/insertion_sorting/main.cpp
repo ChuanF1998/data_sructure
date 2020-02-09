@@ -12,17 +12,16 @@
 
 #include <vector>
 
-
 //升序（用小于）
 template<class T>
-bool min(const T& x, const T& y)
+bool less(const T& x, const T& y)
 {
 	return x < y;
 }
 
 //降序（用大于）
 template<class T>
-bool max(const T& x, const T& y)
+bool greater(const T& x, const T& y)
 {
 	return x > y;
 }
@@ -52,11 +51,11 @@ int main()
 	std::vector<int> arr{ 3, 5, 8, 2, 54, 23, 57, 87, 1 };
 	std::vector<char> str{ 't', 'g', 'a', 'l', 'b' };
 	std::vector<double> arr1{ 2.1, 4.5, 1.2, 5.7, 78.7, 0.2 };
-	insertion_sorting(arr, max<int>);
-	insertion_sorting(arr, min<int>);
-	insertion_sorting(str, max<char>);
-	insertion_sorting(str, min<char>);
-	insertion_sorting(arr1, max<double>);
-	insertion_sorting(arr1, min<double>);
+	insertion_sorting(arr, greater<int>);
+	insertion_sorting(arr, less<int>);
+	insertion_sorting(str, greater<char>);
+	insertion_sorting(str, less<char>);
+	insertion_sorting(arr1, greater<double>);
+	insertion_sorting(arr1, less<double>);
 	return 0;
 }
